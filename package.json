@@ -1,0 +1,29 @@
+{
+  "name": "ts-tpae",
+  "version": "0.0.0",
+  "description": "Game Object definition system similar to ECS, consisting of things, parts, actions, and events.",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "build-for-publish": "tsc --outDir dist && printf $(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g') > dist/version.txt",
+    "publish": "npm run build-for-publish && npm publish --access public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/flatverse/ts-tpae.git"
+  },
+  "author": "Cody Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flatverse/ts-tpae/issues"
+  },
+  "homepage": "https://github.com/flatverse/ts-tpae#readme",
+  "devDependencies": {
+    "typescript": "^5.5.2"
+  }
+}
