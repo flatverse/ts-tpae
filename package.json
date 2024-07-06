@@ -1,6 +1,6 @@
 {
   "name": "ts-tpae",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "description": "Game Object definition system similar to ECS, consisting of things, parts, actions, and events.",
   "main": "dist/index.js",
   "files": [
@@ -10,7 +10,7 @@
     "watch": "tsc --watch",
     "build": "tsc",
     "build-for-publish": "tsc --outDir dist && printf $(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g') > dist/version.txt",
-    "publish": "npm run build-for-publish && npm publish --access public",
+    "push": "npm run build-for-publish && npm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
